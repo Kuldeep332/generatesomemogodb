@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+    </div>
+  <div id="main">
+    <div id="div">
+      <form action="/generate" method="post">
+        <input type="text" placeholder="username" name="name">
+        <input type="email" placeholder="email" name="email">
+        <input type="number" placeholder="age" name="age">
+        <input type="submit">
+      </form>
+    <div id="safrate">
+      <% users.forEach(user => { %>
+        <div id="from1">
+            <h1><%= user.username%></h1>
+            <h1><%= user.email %></h1>
+            <h1><%= user.age %></h1>
+            <p>Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. <br>Incidunt iusto aliquam libero.</p>
+            <a href="/delete/<%= user._id %>">delete</a>
+          </div>
+    <% }); %>
+
+    </div>
+
+  </div>
+</body>
+</html>
